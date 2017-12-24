@@ -1,0 +1,7 @@
+#!/bin/sh
+
+echo "see https://bbs.archlinux.org/viewtopic.php?id=200767 Herodotus' 2016-02-22 00:24:15 post"
+echo "you need to re-run:"
+echo "	sudo hp-setup -i"
+
+

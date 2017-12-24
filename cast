@@ -1,0 +1,22 @@
+#!/bin/bash
+F=$1
+echo file=$1
+if [ $# -eq 2 ]
+then
+	S=$2
+	echo subs=$S
+elif [ $# -eq 3 ]
+then
+	S=$2
+	echo subs=$S
+	SEEK="--ffmpeg-ss $3"
+	echo seek=$SEEK
+else
+	filename="${F%.*}"
+	S=${filename}.srt
+	echo subs=$S
+fi
+
+echo "executing: castnow $F --tomp4 $SEEK --ffmpeg-vcodec copy --subtitles $S"
+castnow $F --tomp4 $SEEK --ffmpeg-vcodec copy --subtitles $S
+

@@ -1,0 +1,11 @@
+#!/bin/bash
+if [ -n "$1" ]
+then
+
+	sudo mv /usr/bin/pulseaudio.no /usr/bin/pulseaudio
+	pulseaudio -D
+else
+	sudo mv /usr/bin/pulseaudio /usr/bin/pulseaudio.no
+	sudo killall -9 pulseaudio
+fi
+

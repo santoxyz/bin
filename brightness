@@ -5,9 +5,23 @@ max=`cat /sys/class/backlight/intel_backlight/max_brightness`
 if [ -z $1 ] 
 then
 	echo "please give me the desired brightness as an argument (0 - $max)"
+	exit 0
 else
 	br=$1
 fi
 
+if [ $br = "inc" ]
+then
+	cur=`cat /sys/class/backlight/intel_backlight/brightness`
+	let "cur+=5"
+	br=$cur	
+fi
+
+if [ $br = "dec" ]
+then
+	cur=`cat /sys/class/backlight/intel_backlight/brightness`
+	let "cur-=5"
+	br=$cur	
+fi
 echo setting brightness value: $br
-echo $br > $file
+sudo bash -c "echo $br > $file"
