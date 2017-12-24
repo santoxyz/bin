@@ -1,0 +1,2 @@
+echo pwd=ls\!12345
+sudo mount.cifs //192.168.1.252/spin$ /media/elettronica_sistema -ouser=lsantini

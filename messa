@@ -1,0 +1,3 @@
+#!/bin/sh
+cvlc --loop ~/Downloads/messa.flv --rtsp-host 192.168.1.96:6000 --sout='#transcode{soverlay,ab=64,samplerate=44100,channels=2,acodec=mp3,vcodec=h264,width=480,height=270,fps=25,vb=800,venc=x264{level=12,no-cabac,threads=4,bframes=0,min-keyint=1,keyint=50}}:gather:rtp{mp4a-latm,sdp=rtsp://192.168.1.96:6000/messa.sdp'
+#dst=192.168.1.59,port=6000,

@@ -1,0 +1,27 @@
+#!/bin/sh
+hdmi=HDMI1
+pri=LVDS1
+
+killall -9 xscreensaver
+#force detection
+xrandr --output $hdmi --set load_detection 1
+
+#set clone mode
+xrandr --output $hdmi --same-as $pri
+
+#set fullhd resolution on hdmi output
+xrandr --output $hdmi --mode 1920x1080 
+
+#set as primary
+xrandr --output $hdmi --primary 
+
+
+#play video
+mplayer -fs -ao alsa:device=hdmi "$@"
+
+#hdmi output off
+xrandr --output $hdmi --off
+
+#reset resolution on primary output
+xrandr --output $pri --auto
+

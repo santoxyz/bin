@@ -1,0 +1,4 @@
+#!/bin/sh
+JAVA=/opt/jdk1.7.0_45-x64
+GTK2_RC_FILES=/home/s/.config/eclipselayout.conf 
+eclipse -vm $JAVA/bin/java -Xms 256M #-vmargs -Xmx512M 

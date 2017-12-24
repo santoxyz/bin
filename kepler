@@ -1,0 +1,4 @@
+#!/bin/sh
+JAVA=/usr/lib/jvm/java-7-jre/jre
+#GTK2_RC_FILES=/home/s/.config/eclipselayout.conf 
+/opt/eclipse-kepler-SR2/eclipse -vm $JAVA/bin/java -Xms 256M #-vmargs -Xmx512M         

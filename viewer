@@ -1,0 +1,22 @@
+#!/bin/bash
+
+
+ext=`echo $1 |awk -F . '{print $NF}'`
+
+echo "ext: $ext"
+
+case "$ext" in
+  "txt"   ) geany $1;;
+  "pdf"   ) evince $1;;
+  "doc"   ) libreoffice $1;;
+  "docx"   ) libreoffice $1;;
+  "xls"   ) libreoffice $1;;
+  "xlsx"   ) libreoffice $1;;
+  "ppt"   ) libreoffice $1;;
+  "pptx"   ) libreoffice $1;;
+  "png"   ) viewnior $1;;
+  "jpg"   ) viewnior $1;;
+  "jpeg"   ) viewnior $1;;
+  "JPEG"   ) viewnior $1;;
+  "JPG"   ) viewnior $1;;
+esac      #  Allows ranges of characters in [square brackets],

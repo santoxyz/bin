@@ -1,0 +1,1 @@
+sudo mount -t cifs -o username=lsantini,password=ls\!12345 //192.168.1.252/lsantini$ /media/lsantini/

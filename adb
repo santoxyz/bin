@@ -1,0 +1,1 @@
+/home/s/Android/Sdk/platform-tools/adb

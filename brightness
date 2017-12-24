@@ -1,0 +1,13 @@
+#!/bin/sh
+br=255;
+file=/sys/class/backlight/intel_backlight/brightness
+max=`cat /sys/class/backlight/intel_backlight/max_brightness`
+if [ -z $1 ] 
+then
+	echo "please give me the desired brightness as an argument (0 - $max)"
+else
+	br=$1
+fi
+
+echo setting brightness value: $br
+echo $br > $file

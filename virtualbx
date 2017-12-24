@@ -1,0 +1,4 @@
+#!/bin/bash
+gksudo -m "modprobing Virtualbox Kernel Modules" "modprobe vboxdrv"
+gksudo -m "modprobing Virtualbox Kernel Modules 2" "modprobe vboxnetflt"
+virtualbox

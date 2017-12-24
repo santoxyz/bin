@@ -1,0 +1,2 @@
+#!/bin/sh
+bin32-firefox -new-instance https://aristonthermo.webex.com/mw0401l/mywebex/default.do?siteurl=aristonthermo-en

@@ -1,0 +1,2 @@
+opacity=100
+stjerm -k F12 -w 1366 -h 600 -o $opacity -tp left -sc false -tl " " -ah false -l 50000

@@ -1,0 +1,1 @@
+sudo mount.cifs //192.168.1.55/feb /media/feb -ouser=SPES,passwd=spes\!1234

@@ -1,0 +1,7 @@
+#!/bin/sh
+sudo chgrp uucp /run/lock
+sudo chmod g+w /run/lock
+echo fatto.
+ls -alt /run | grep lock
+mkdir -p /tmp/kura/snapshots
+cp /home/s/workspace_ariston/snapshot_0.xml /tmp/kura/snapshots
