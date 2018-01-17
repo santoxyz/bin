@@ -2,6 +2,23 @@
 hdmi=HDMI1
 pri=LVDS1
 
+F=$1
+echo file=$1
+if [ $# -eq 2 ]
+then
+        S=$2
+        echo subs=$S
+elif [ $# -eq 3 ]
+then
+        S=$2
+        echo subs=$S
+        SEEK="--ffmpeg-ss $3"
+        echo seek=$SEEK
+else
+        filename="${F%.*}"
+        S=${filename}.srt
+        echo subs=$S
+fi
 killall -9 xscreensaver
 #force detection
 xrandr --output $hdmi --set load_detection 1
@@ -17,7 +34,7 @@ xrandr --output $hdmi --primary
 
 
 #play video
-mplayer -fs -ao alsa:device=hdmi "$@"
+mplayer -fs -ao alsa:device=hdmi "$@" -sub $S
 
 #hdmi output off
 xrandr --output $hdmi --off

@@ -1,0 +1,11 @@
+echo "executing: sleep 1; xset dpms force off"
+sleep 1; xset dpms force off
+
+echo "other commands you can appreciate:"
+echo "xset s off" 				-- Disable screen saver blanking
+echo xset s 3600 3600			-- Change blank time to 1 hour
+echo xset -dpms					-- Turn off DPMS
+echo xset s off -dpms	    	-- Disable DPMS and prevent screen from blanking
+echo xset dpms force off		-- Turn off screen immediately
+echo xset dpms force standby	-- Standby screen
+echo xset dpms force suspend	-- Suspend screen

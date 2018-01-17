@@ -1,0 +1,15 @@
+#!/bin/bash
+echo uccido pulseaudio
+paudiokiller
+
+echo avvio jack
+jack_control start
+
+echo avvio alsa_in
+alsa_in -d hw:Amplifier,0 &
+
+echo attenzione, controlla i volumi in alsamixer!
+ 
+echo avvio ardour
+ardour5
+

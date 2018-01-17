@@ -1,4 +1,5 @@
 P=/sys/class/power_supply/BAT0
-echo "full   $(cat $P/charge_full)" 
-echo "design $(cat $P/charge_full_design)" 
-echo $(($(cat $P/charge_full)*100/$(cat $P/charge_full_design)))% 
+prefix=charge
+echo "full   $(cat $P/$prefix_full)" 
+echo "design $(cat $P/$prefix_full_design)" 
+echo $(($(cat $P/$prefix_full)*100/$(cat $P/$prefix_full_design)))% 

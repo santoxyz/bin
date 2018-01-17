@@ -1,2 +1,4 @@
 P=/sys/class/power_supply/BAT0
-echo $(($(cat $P/charge_now)*100/$(cat $P/charge_full)))% $(cat $P/status)
+C=charge
+echo $(($(cat $P/${C}_now)*100/$(cat $P/${C}_full)))% $(cat $P/status)
+echo Health: $(($(cat $P/${C}_full)*100/$(cat $P/${C}_full_design)))% 
