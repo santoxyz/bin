@@ -1,0 +1,3 @@
+aurman -S xsane brscan4
+brsaneconfig4 -a name=DCP-1610W model=DCP-1610W ip=192.168.11.7
+sudo scanimage -L

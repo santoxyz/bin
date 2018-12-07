@@ -1,0 +1,2 @@
+sudo aurman -S brother-dcp1610w
+sudo system-config-printer -> aggiungi -> stampante di rete
