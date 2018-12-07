@@ -1,0 +1,20 @@
+#default zoom
+
+about:config
+layout.css.devPixelsPerPx 1.5
+
+#hide horizontal tabs
+mkdir -p ~/.mozilla/firefox/archlabs.default/chrome
+cat > ~/.mozilla/firefox/archlabs.default/chrome/userChrome.css <<EOF
+@namespace url("http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul");
+
+/* to hide the native tabs */
+#TabsToolbar {
+    visibility: collapse;
+}
+
+/* to hide the sidebar header */
+#sidebar-header {
+    visibility: collapse;
+}
+EOF
