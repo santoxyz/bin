@@ -1,0 +1,3 @@
+edit /etc/X11/xorg.conf.d/40-touchpad.conf
+add to "touchpad" Identified Section:
+    Option "ClickMethod" "clickfinger"
