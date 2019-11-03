@@ -1,0 +1,6 @@
+#!/bin/bash
+echo "Il vecchio gestore era:"
+cpupower frequency-info | grep \"
+sudo cpupower frequency-set  -g performance
+echo "Il nuovo gestore è:"
+cpupower frequency-info | grep \"

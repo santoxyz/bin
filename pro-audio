@@ -1,0 +1,12 @@
+#pacman -S jack2 cadence pulseaudio-jack
+sudo cpupower_performance
+sudo bash -c 'echo 2048 > /sys/class/rtc/rtc0/max_user_freq'
+sudo bash -c 'echo 2048 > /proc/sys/dev/hpet/max-user-freq'
+sudo sysctl vm.swappiness=10
+sudo sysctl fs.inotify.max_user_watches=600000
+SOUND_CARD_PCI_ID=00:1b.0 # check with: lspci | grep -i audio
+sudo bash -c 'setpci -v -d *:* latency_timer=b0'
+sudo bash -c 'setpci -v -s $SOUND_CARD_PCI_ID latency_timer=ff' # eg. SOUND_CARD_PCI_ID=03:00.0 (see below)
+#jack_control start
+echo " configure jack with Period: 128 , Buffers: 3"
+cadence &

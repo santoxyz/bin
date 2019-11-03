@@ -1,0 +1,3 @@
+chromecast:
+chrome://flags/
+set media-router enabled.
